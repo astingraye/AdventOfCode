@@ -43,15 +43,13 @@ const safeArrays = rows.filter((e) => {
         Array(e.length).fill("").map((p, index) => {
             const newArray = [...e.slice(0, index), ...e.slice(index + 1)];
 
-            console.log(`${e} without ${index} is ${newArray}`);
-            
             if(checkArray(newArray)) {
                 check = true;
             }
         })
     }
 
-    return check;;
+    return check;
 });
 
 console.log(safeArrays.length);
